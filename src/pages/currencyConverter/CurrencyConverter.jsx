@@ -104,7 +104,7 @@ const CurrencyConverter = () => {
           </div>
 
 
-          <div className="mt-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4 sm:-translate-y-1/2 z-20">
+          <div className="mt-3 absolute top-3/5 sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4 sm:-translate-y-1/2 z-20">
             <Button
               onClick={handleConvert}
               disabled={conversionStatus === "loading"}
