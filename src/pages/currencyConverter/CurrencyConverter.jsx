@@ -113,7 +113,7 @@ const CurrencyConverter = () => {
             </Button>
           </div>
 
-          <div className='flex-1 border border-secondary rounded-3xl w-full p-7 flex items-center justify-center'>
+          <div className='mt-6 sm:mt-0 flex-1 border border-secondary rounded-3xl w-full p-7 flex items-center justify-center'>
 
             {conversionStatus === "idle" && (
               <p className="text-gray-400">Select currencies and amount</p>
