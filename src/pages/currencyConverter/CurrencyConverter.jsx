@@ -45,8 +45,8 @@ const CurrencyConverter = () => {
 
               <div className='flex flex-row items-center justify-center gap-4 w-full'>
                 <label className='font-bold w-9'>From</label>
-                <Select value={selectedCurrency} onValueChange={setSelectedCurrency}>
-                  <SelectTrigger className="w-full sm:w-[180.01px]">
+                <Select value={selectedCurrency} onValueChange={setSelectedCurrency} >
+                  <SelectTrigger className="w-full sm:w-[180.01px] ">
                     <SelectValue placeholder="From" />
                   </SelectTrigger>
                   <SelectContent>
@@ -56,7 +56,7 @@ const CurrencyConverter = () => {
                       )}
 
                       {currencyStatus === "succeeded" && currencyList.map(([code]) => (
-                        <SelectItem key={code} value={code}>{code}</SelectItem>
+                        <SelectItem key={code} value={code} >{code} </SelectItem>
                       ))}
 
                       {currencyStatus === "failed" && (
@@ -104,7 +104,7 @@ const CurrencyConverter = () => {
           </div>
 
 
-          <div className="mt-3 absolute top-3/5 sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/4 sm:-translate-y-1/2 z-20">
+          <div className="mt-9 sm:mt-2 absolute top-5/9 sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 ">
             <Button
               onClick={handleConvert}
               disabled={conversionStatus === "loading"}
@@ -113,7 +113,7 @@ const CurrencyConverter = () => {
             </Button>
           </div>
 
-          <div className='mt-6 sm:mt-0 flex-1 border border-secondary rounded-3xl w-full p-7 flex items-center justify-center'>
+          <div className='mt-6 sm:mt-0 flex-1 border-t-2  border-gray-400  rounded-3xl w-full p-7 flex items-center justify-center'>
 
             {conversionStatus === "idle" && (
               <p className="text-gray-400">Select currencies and amount</p>

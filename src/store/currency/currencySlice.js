@@ -7,7 +7,7 @@ const initialState = { status: "idle", data: [], error: "" }
 const fetchCurrencies = createAsyncThunk("currency/fetchCurrencies", async (__, thinkApi) => {
     try {
         const response = await axios.get(`${BASE_URL}/currencies/?apikey=${API_KEY}`);
-        console.log(response.data);
+    
         return response.data.data
     } catch (error) {
         return thinkApi.rejectWithValue(error)
